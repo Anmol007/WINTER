@@ -1,0 +1,7 @@
+1. scanf in while returns no. of arguments
+
+2. na
+
+3. segmented sieve n=a*b , maximum root (n) tak enlisting, first segment permanent upto 32000(toot of 10^9)
+
+4. 
