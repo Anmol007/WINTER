@@ -1,41 +1,24 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int main()
-{
-	freopen("input.txt","r",stdin);
-//	freopen("output.txt","w",stdout);
-	int t;
-	cin>>t;
-	while(t--)
+
+int main() {
+	int a,b,c,d;
+	cin>>a>>b>>c;
+	while(!(a==0 && b==0 && c==0))
 	{
-	int a,b;
-	cin>>a>>b;
-	if(b==0)
-	{
-		cout<<1<<endl;
-		continue;
+		if((b-a)==(c-b))
+		{
+			d=c+(b-a);
+			cout<<"AP "<<d<<endl;
+		}
+		else if((b/a)==(c/b))
+		{
+			d=c*(b/a);
+			cout<<"GP "<<d<<endl;
+		}
+		
+		cin>>a>>b>>c;
 	}
-	if(a%10==0 || a%10==1 || a%10==5 || a%10==6)
-	{
-	cout<<(a%10)<<endl;
-	continue;
-	}
-	switch(b%4)
-	{
-		case 0:
-		 if(a%10==2 || a%10==4 || a%10==8)cout<<6<<endl;
-			else if(a%10==3 || a%10==7 || a%10==9)cout<<1<<endl;
-		break;	
-		case 1:
-		cout<<a%10<<endl;
-		break;	
-		case 2:
-		 cout<<(a*a)%10;
-		break;			
-		case 3:
-			cout<<(a*a*a)%10<<endl;
-		break;	
-	}	
-	}	
+	// your code goes here
 	return 0;
 }
